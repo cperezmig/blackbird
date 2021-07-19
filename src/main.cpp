@@ -124,22 +124,22 @@ int main(int argc, char** argv) {
 
     index++;
   }
-  if (params.okcoinEnable &&
-     (params.okcoinApi.empty() == false || params.isDemoMode)) {
-    params.addExchange("OKCoin", params.okcoinFees, false, true);
-    getQuote[index] = OKCoin::getQuote;
-    getAvail[index] = OKCoin::getAvail;
-    sendLongOrder[index] = OKCoin::sendLongOrder;
-    sendShortOrder[index] = OKCoin::sendShortOrder;
-    isOrderComplete[index] = OKCoin::isOrderComplete;
-    getActivePos[index] = OKCoin::getActivePos;
-    getLimitPrice[index] = OKCoin::getLimitPrice;
+  //if (params.okcoinEnable &&
+     //(params.okcoinApi.empty() == false || params.isDemoMode)) {
+    //params.addExchange("OKCoin", params.okcoinFees, false, true);
+    //getQuote[index] = OKCoin::getQuote;
+    //getAvail[index] = OKCoin::getAvail;
+    //sendLongOrder[index] = OKCoin::sendLongOrder;
+    //sendShortOrder[index] = OKCoin::sendShortOrder;
+    //isOrderComplete[index] = OKCoin::isOrderComplete;
+    //getActivePos[index] = OKCoin::getActivePos;
+    //getLimitPrice[index] = OKCoin::getLimitPrice;
 
-    dbTableName[index] = "okcoin";
-    createTable(dbTableName[index], params);
+    //dbTableName[index] = "okcoin";
+    //createTable(dbTableName[index], params);
 
-    index++;
-  }
+    //index++;
+  //}
   if (params.bitstampEnable &&
      (params.bitstampClientId.empty() == false || params.isDemoMode)) {
     params.addExchange("Bitstamp", params.bitstampFees, false, true);
@@ -230,35 +230,35 @@ int main(int argc, char** argv) {
 
     index++;
   }
-  if (params.gdaxEnable &&
-     (params.gdaxApi.empty() == false || params.isDemoMode)) {
-    params.addExchange("GDAX", params.gdaxFees, false, true);
-    getQuote[index] = GDAX::getQuote;
-    getAvail[index] = GDAX::getAvail;
-    getActivePos[index] = GDAX::getActivePos;
-    getLimitPrice[index] = GDAX::getLimitPrice;
-    sendLongOrder[index] = GDAX::sendLongOrder;
-    isOrderComplete[index] = GDAX::isOrderComplete;
-    dbTableName[index] = "gdax";
-    createTable(dbTableName[index], params);
+  //if (params.gdaxEnable &&
+     //(params.gdaxApi.empty() == false || params.isDemoMode)) {
+    //params.addExchange("GDAX", params.gdaxFees, false, true);
+    //getQuote[index] = GDAX::getQuote;
+    //getAvail[index] = GDAX::getAvail;
+    //getActivePos[index] = GDAX::getActivePos;
+    //getLimitPrice[index] = GDAX::getLimitPrice;
+    //sendLongOrder[index] = GDAX::sendLongOrder;
+    //isOrderComplete[index] = GDAX::isOrderComplete;
+    //dbTableName[index] = "gdax";
+    //createTable(dbTableName[index], params);
 
-    index++;
-  }
-  if (params.quadrigaEnable &&
-         (params.quadrigaApi.empty() == false || params.isDemoMode)) {
-    params.addExchange("QuadrigaCX", params.quadrigaFees, false, true);
-    getQuote[index] = QuadrigaCX::getQuote;
-    getAvail[index] = QuadrigaCX::getAvail;
-    sendLongOrder[index] = QuadrigaCX::sendLongOrder;
-    isOrderComplete[index] = QuadrigaCX::isOrderComplete;
-    getActivePos[index] = QuadrigaCX::getActivePos;
-    getLimitPrice[index] = QuadrigaCX::getLimitPrice;
+    //index++;
+  //}
+  //if (params.quadrigaEnable &&
+         //(params.quadrigaApi.empty() == false || params.isDemoMode)) {
+    //params.addExchange("QuadrigaCX", params.quadrigaFees, false, true);
+    //getQuote[index] = QuadrigaCX::getQuote;
+    //getAvail[index] = QuadrigaCX::getAvail;
+    //sendLongOrder[index] = QuadrigaCX::sendLongOrder;
+    //isOrderComplete[index] = QuadrigaCX::isOrderComplete;
+    //getActivePos[index] = QuadrigaCX::getActivePos;
+    //getLimitPrice[index] = QuadrigaCX::getLimitPrice;
 
-    dbTableName[index] = "quadriga";
-    createTable(dbTableName[index], params);
+    //dbTableName[index] = "quadriga";
+    //createTable(dbTableName[index], params);
 
-    index++;
-  }
+    //index++;
+  //}
   if (params.exmoEnable &&
          (params.exmoApi.empty() == false || params.isDemoMode)) {
     params.addExchange("Exmo", params.exmoFees, false, true);
